@@ -1,21 +1,111 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Mi luna y mi corazón</title>
-	<!-- Agrega la fuente de iconos Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style>
-		/* Aplica estilo al corazón */
-		.heart {
-			color: red;
-			font-size: 24px;
-			margin-left: 5px;
-		}
-	</style>
-</head>
-<body>
-	<!-- Agrega la frase y el icono de corazón -->
-	<h1>Creo que encontre mi luna dentro de esos ojos grandes y lindos <i class="fa fa-heart heart"></i></h1>
-</body>
+  <head>
+    <title>Viendo la luna</title>
+    <meta charset="UTF-8">
+    <style>
+      body {
+        background-color: #05122A;
+      }
+      
+      .container {
+        width: 600px;
+        margin: 0 auto;
+        position: relative;
+      }
+      
+      .moon {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #FCD116;
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        box-shadow: 0 0 50px #FCD116;
+      }
+      
+      .person {
+        position: absolute;
+        bottom: 0;
+      }
+      
+      .person--male {
+        width: 100px;
+        height: 200px;
+        background-color: #5F9EA0;
+        left: 100px;
+        border-radius: 50px 50px 0 0;
+      }
+      
+      .person--female {
+        width: 100px;
+        height: 200px;
+        background-color: #FFC0CB;
+        right: 100px;
+        border-radius: 50px 50px 0 0;
+      }
+      
+      .person__head {
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        top: -25px;
+        box-shadow: 0 0 10px #333;
+      }
+      
+      .person__hair {
+        width: 80px;
+        height: 80px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: -60px;
+        left: -15px;
+        z-index: 1;
+      }
+      
+      .person__eyes {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        box-shadow: 5px 0 0 #fff, -5px 0 0 #fff;
+      }
+      
+      .person__mouth {
+        width: 40px;
+        height: 20px;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        left: 5px;
+        border-radius: 50% / 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="moon"></div>
+      <div class="person person--male">
+        <div class="person__hair"></div>
+        <div class="person__head"></div>
+        <div class="person__eyes"></div>
+        <div class="person__mouth"></div>
+      </div>
+      <div class="person person--female">
+        <div class="person__hair"></div>
+        <div class="person__head"></div>
+        <div class="person__eyes"></div>
+        <div class="person__mouth"></div>
+      </div>
+    </div>
+  </body>
 </html>
 
