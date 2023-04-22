@@ -1,75 +1,112 @@
-<div class="scene">
-  <div class="moon"></div>
-  <div class="mountain mountain1"></div>
-  <div class="mountain mountain2"></div>
-  <div class="tree tree1"></div>
-  <div class="tree tree2"></div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viendo la luna</title>
+    <meta charset="UTF-8">
+    <style>
+      body {
+        background-color: #05122A;
+      }
+      
+      .container {
+        width: 600px;
+        margin: 0 auto;
+        position: relative;
+      }
+      
+      .moon {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #FCD116;
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        box-shadow: 0 0 50px #FCD116;
+      }
+      
+      .person {
+        position: absolute;
+        bottom: 0;
+      }
+      
+      .person--male {
+        width: 100px;
+        height: 200px;
+        background-color: #5F9EA0;
+        left: 100px;
+        border-radius: 50px 50px 0 0;
+      }
+      
+      .person--female {
+        width: 100px;
+        height: 200px;
+        background-color: #FFC0CB;
+        right: 100px;
+        border-radius: 50px 50px 0 0;
+      }
+      
+      .person__head {
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        top: -25px;
+        box-shadow: 0 0 10px #333;
+      }
+      
+      .person__hair {
+        width: 80px;
+        height: 80px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: -60px;
+        left: -15px;
+        z-index: 1;
+      }
+      
+      .person__eyes {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        box-shadow: 5px 0 0 #fff, -5px 0 0 #fff;
+      }
+      
+      .person__mouth {
+        width: 40px;
+        height: 20px;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        left: 5px;
+        border-radius: 50% / 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="moon"></div>
+      <div class="person person--male">
+        <div class="person__hair"></div>
+        <div class="person__head"></div>
+        <div class="person__eyes"></div>
+        <div class="person__mouth"></div>
+      </div>
+      <div class="person person--female">
+        <div class="person__hair"></div>
+        <div class="person__head"></div>
+        <div class="person__eyes"></div>
+        <div class="person__mouth"></div>
+      </div>
+    </div>
+  </body>
+</html>
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .scene {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: #002a47;
-  }
-  
-  .moon {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ffd500;
-    box-shadow: 0 0 10px 10px #ffd500;
-  }
-  
-  .mountain {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 0;
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
-  }
-  
-  .mountain1 {
-    z-index: -1;
-    border-bottom: 300px solid #003c5a;
-    transform: translateY(100px);
-  }
-  
-  .mountain2 {
-    border-bottom: 200px solid #002536;
-    transform: translateY(150px);
-  }
-  
-  .tree {
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    transform-origin: bottom center;
-  }
-  
-  .tree1 {
-    left: 25%;
-    border-bottom: 100px solid #0d483a;
-    transform: translateY(30px) scale(1.2);
-  }
-  
-  .tree2 {
-    right: 25%;
-    border-bottom: 150px solid #0d483a;
-    transform: translateY(50px) scale(0.8);
-  }
-</style>
 
